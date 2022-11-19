@@ -1,3 +1,35 @@
+### Tahapan Penambahan Host atau Kontributor
+
+1. Clone proyek ini dengan command:
+```
+> git clone https://github.com/elbahmed/loops-interview.git
+> cd loops-interview
+```
+
+3. Pasang dependensi-dependensi yang diperlukan melalui Composer dengan menjalankan command berikut pada repositori lokal:
+```
+> composer install && composer update
+```
+Pastikan terlebih dahulu bahwa Composer telah terpasang pada host baru.
+
+4. Buat file ```.env``` pada direktori lokal dengan isi berupa salinan dari ```.env.example```. Bisa dilakukan dengan command berikut:
+```
+> cp .env.example .env
+```
+
+5. Setting .env sesuai dengan config yang anda gunakan
+
+6. Migrate database:
+```
+> php artisan migrate && php artisan db:seed
+```
+
+7. Jalankan server:
+```
+> php artisan serve
+```
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
